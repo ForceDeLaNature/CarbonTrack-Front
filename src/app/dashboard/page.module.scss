@@ -1,10 +1,14 @@
 .wrapper {
-    font-family: var(--font-geist-sans);
-    // background-color: #7fffd4;
-    width: 100%;
-    padding: 39px 31px;
-    // display: grid;
-    // grid-template-columns: repeat(4, 1fr);
-    // gap: 35px 24px;
+  font-family: var(--font-geist-sans);
+  margin-left: 20%;
+  // background-color: #7fffd4;
+  width: 100%;
+  padding: 39px 31px;
+  // display: grid;
+  // grid-template-columns: repeat(4, 1fr);
+  // gap: 35px 24px;
+  .header {
+    display: flex;
+    justify-content: space-between;
   }
-  
+}
