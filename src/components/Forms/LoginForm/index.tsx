@@ -37,6 +37,9 @@ function LoginForm({}: Props) {
       <Link href="/auth/register">
         <p>je n&apos;ai pas de compte</p>
       </Link>
+      <Link href="/dashboard">
+        <p>go to dashboard</p>
+      </Link>
     </form>
   );
 }
