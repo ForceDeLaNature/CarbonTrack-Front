@@ -1,0 +1,128 @@
+[
+  {
+    "origin": "Paris",
+    "destination": "Lyon",
+    "mode_transport": "Voiture (essence)",
+    "distance_km": 470,
+    "empreinte_co2_kg": 73.6
+  },
+  {
+    "origin": "Paris",
+    "destination": "Lyon",
+    "mode_transport": "Train",
+    "distance_km": 470,
+    "empreinte_co2_kg": 16.8
+  },
+  {
+    "origin": "Paris",
+    "destination": "Lyon",
+    "mode_transport": "Avion",
+    "distance_km": 470,
+    "empreinte_co2_kg": 100.2
+  },
+  {
+    "origin": "Paris",
+    "destination": "Marseille",
+    "mode_transport": "Voiture (diesel)",
+    "distance_km": 770,
+    "empreinte_co2_kg": 116.6
+  },
+  {
+    "origin": "Paris",
+    "destination": "Marseille",
+    "mode_transport": "Train",
+    "distance_km": 770,
+    "empreinte_co2_kg": 25.4
+  },
+  {
+    "origin": "Paris",
+    "destination": "Marseille",
+    "mode_transport": "Avion",
+    "distance_km": 770,
+    "empreinte_co2_kg": 150.5
+  },
+  {
+    "origin": "Paris",
+    "destination": "Bordeaux",
+    "mode_transport": "Voiture (essence)",
+    "distance_km": 580,
+    "empreinte_co2_kg": 90.1
+  },
+  {
+    "origin": "Paris",
+    "destination": "Bordeaux",
+    "mode_transport": "Train",
+    "distance_km": 580,
+    "empreinte_co2_kg": 19.5
+  },
+  {
+    "origin": "Paris",
+    "destination": "Bordeaux",
+    "mode_transport": "Avion",
+    "distance_km": 580,
+    "empreinte_co2_kg": 110.2
+  },
+  {
+    "origin": "Lyon",
+    "destination": "Nice",
+    "mode_transport": "Voiture (diesel)",
+    "distance_km": 470,
+    "empreinte_co2_kg": 69.4
+  },
+  {
+    "origin": "Lyon",
+    "destination": "Nice",
+    "mode_transport": "Train",
+    "distance_km": 470,
+    "empreinte_co2_kg": 13.7
+  },
+  {
+    "origin": "Lyon",
+    "destination": "Nice",
+    "mode_transport": "Avion",
+    "distance_km": 470,
+    "empreinte_co2_kg": 96.3
+  },
+  {
+    "origin": "Toulouse",
+    "destination": "Montpellier",
+    "mode_transport": "Voiture (essence)",
+    "distance_km": 150,
+    "empreinte_co2_kg": 23.2
+  },
+  {
+    "origin": "Toulouse",
+    "destination": "Montpellier",
+    "mode_transport": "Train",
+    "distance_km": 150,
+    "empreinte_co2_kg": 7.8
+  },
+  {
+    "origin": "Toulouse",
+    "destination": "Montpellier",
+    "mode_transport": "Avion",
+    "distance_km": 150,
+    "empreinte_co2_kg": 31.5
+  },
+  {
+    "origin": "Marseille",
+    "destination": "Nantes",
+    "mode_transport": "Voiture (diesel)",
+    "distance_km": 880,
+    "empreinte_co2_kg": 132.2
+  },
+  {
+    "origin": "Marseille",
+    "destination": "Nantes",
+    "mode_transport": "Train",
+    "distance_km": 880,
+    "empreinte_co2_kg": 34.5
+  },
+  {
+    "origin": "Marseille",
+    "destination": "Nantes",
+    "mode_transport": "Avion",
+    "distance_km": 880,
+    "empreinte_co2_kg": 174.6
+  }
+]

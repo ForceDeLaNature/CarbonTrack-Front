@@ -1,0 +1,20 @@
+.wrapper {
+    display: flex;
+    height: 100vh;
+    // overflow: hidden;
+    .right_container, .left_container {
+        width: 50vw;
+        // height: 100vh;
+        position: relative;
+    }
+    .left_container {
+        overflow: hidden;
+    }
+    .right_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        height: 100%;
+    }
+}
