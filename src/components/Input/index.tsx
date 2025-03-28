@@ -6,7 +6,7 @@ type Props = {
   inputType: string;
   label: string;
   name: string;
-  options?: string[]; // Options disponibles pour le select
+  options?: string[];
   errorMessage?: string;
   value?: string;
   handleChangeFunction?: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
@@ -23,6 +23,7 @@ const Input = ({
   handleChangeFunction,
 }: Props) => {
   return (
+    console.log(options),
     <div className={styles.auth_form_field}>
       <label htmlFor={name}>{label} :</label>
       {inputType === "input" ? (

@@ -1,5 +1,4 @@
 'use server'
-import { redirect } from "next/navigation"
 import { fetchRestApi } from "@/utils/utils"
 
 interface State {
@@ -11,21 +10,19 @@ export async function addTrip(state: State, formData: FormData) {
     const destination = formData.get('destination')
     const transportMode = formData.get('transportMode')
 
-    if(!username){
+    if(!origin || !destination || !transportMode){  
         return{
-            message: "first name is required",
+            message: "is required",
             messageType: "",
             success: false
         }
     }else{
         const data = {
-            username,
-            email,
-            password
+            origin,
+            destination,
+            transportMode
         }
-        const res = await fetchRestApi("auth/register", "POST", data)
+        const res = await fetchRestApi("", "POST", data)
         console.log(res)
-        await new Promise((resolve) => setTimeout(resolve, 1000))
-        redirect("/auth/login")
     }
 }
