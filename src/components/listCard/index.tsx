@@ -2,8 +2,16 @@ import Link from "next/link";
 import React from "react";
 import styles from "./listCard.module.scss";
 
+interface TransportData {
+  origin: string;           // Ville d'origine
+  destination: string;      // Ville de destination
+  mode_transport: string;   // Mode de transport (Voiture, Train, Avion, etc.)
+  distance_km: number;      // Distance en kilomètres
+  empreinte_co2_kg: number; // Empreinte carbone en kilogrammes de CO2
+}
+
 type Props = {
-  dataset: any;
+  dataset: TransportData[];
 };
 
 function index({ dataset }: Props) {
@@ -11,7 +19,7 @@ function index({ dataset }: Props) {
     <div className={styles.wrapper}>
       {dataset && (
         <ul>
-          {dataset.map((item: any, key: number) => {
+          {dataset.map((item: TransportData, key: number) => {
             return (
               // <li key={key}>
               <Link key={key} href={``}>
