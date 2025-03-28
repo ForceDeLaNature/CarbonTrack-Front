@@ -3,7 +3,11 @@ import { redirect } from "next/navigation"
 import { fetchRestApi } from "@/utils/utils"
 import { cookies } from 'next/headers'
 
-export async function register(state, formData: FormData) {
+interface State {
+    [key: string]: string; // Clé de type string, valeur de type quelconque
+  }
+
+export async function register(state: State, formData: FormData) {
     const username = formData.get('username')
     const email = formData.get('email')
     const password = formData.get('password')
@@ -26,7 +30,7 @@ export async function register(state, formData: FormData) {
     }
 }
 
-export async function login(state, formData: FormData) {
+export async function login(state: State, formData: FormData) {
     const email = formData.get('email')
     const password = formData.get('password')
     console.log(email, password)
