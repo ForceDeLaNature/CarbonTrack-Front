@@ -11,8 +11,8 @@ const navItems = [
     // icon: <HomeIcon fill="black" width={15} height={15} />,
   },
   {
-    path: "/dashboard/sales",
-    label: "Sales",
+    path: "/dashboard/history",
+    label: "History",
     // icon: <SalesIcon fill="black" width={15} height={15} />,
   },
   {

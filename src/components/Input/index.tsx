@@ -2,26 +2,52 @@ import React from "react";
 import styles from "./input.module.scss";
 
 type Props = {
-  type: string;
+  type?: string;
+  inputType: string;
   label: string;
   name: string;
+  options?: string[]; // Options disponibles pour le select
   errorMessage?: string;
   value?: string;
-  handleChangeFunction?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  handleChangeFunction?: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => void;
 };
 
-const Input = ({ type, label, name, errorMessage, value, handleChangeFunction }: Props) => {
+const Input = ({
+  inputType,
+  label,
+  name,
+  options,
+  errorMessage,
+  value,
+  type,
+  handleChangeFunction,
+}: Props) => {
   return (
     <div className={styles.auth_form_field}>
       <label htmlFor={name}>{label} :</label>
-      <input
-        type={type}
-        id={name}
-        name={name}
-        value={value} // ✅ Géré comme un input contrôlé
-        onChange={handleChangeFunction}
-      />
-      {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>} {/* ✅ Affichage de l'erreur si elle existe */}
+      {inputType === "input" ? (
+        <input
+          type={type} // On garde "text" par défaut pour un input classique
+          id={name}
+          name={name}
+          value={value}
+          onChange={handleChangeFunction}
+        />
+      ) : (
+        <select
+          id={name}
+          name={name}
+          value={value}
+          onChange={handleChangeFunction}
+        >
+          {options?.map((option, index) => (
+            <option key={index} value={option}>
+              {option}
+            </option>
+          ))}
+        </select>
+      )}
+      {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
     </div>
   );
 };

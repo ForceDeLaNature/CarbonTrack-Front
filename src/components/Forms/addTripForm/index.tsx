@@ -2,29 +2,29 @@
 import React from "react";
 import Button from "@/components/Button";
 import Input from "@/components/Input";
-import styles from "./loginForm.module.scss";
-import { login } from "@/actions/auth";
+import styles from "./AddTripForm.module.scss";
+import { addTrip } from "@/actions/trip";
 import { useActionState } from "react";
 import Link from "next/link";
 
 type Props = object;
 
 const inputFields = [
-  { inputType: "input", type: "text", label: "Email", name: "email" },
-  { inputType: "input", type: "password", label: "Password", name: "password" },
+  { inputType: "input", type: "text", label: "Origin", name: "origin" },
+  { inputType: "input", type: "text", label: "Destination", name: "destination" },
+  { inputType: "select", type: "password", label: "Password", name: "password" },
 ];
 
 const initialState = {
   message: "",
 };
 
-function LoginForm({}: Props) {
-  const [state, formAction, pending] = useActionState(login, initialState);
-  console.log(state);
+function AddTripForm({}: Props) {
+  const [, formAction, pending] = useActionState(addTrip, initialState);
   return (
     <form action={formAction} className={styles.wrapper}>
-      {inputFields.map(({ type, label, name, inputType }) => (
-        <Input key={name} inputType={inputType} type={type} label={label} name={name} />
+      {inputFields.map(({ type, label, name }) => (
+        <Input key={name} type={type} label={label} name={name} />
       ))}
       <Button
         label={pending ? "Loading..." : "Login"}
@@ -41,4 +41,4 @@ function LoginForm({}: Props) {
   );
 }
 
-export default LoginForm;
+export default AddTripForm;

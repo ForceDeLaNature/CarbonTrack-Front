@@ -10,9 +10,9 @@ import Link from "next/link";
 type Props = object;
 
 const inputFields = [
-  { type: "text", label: "Username", name: "username" },
-  { type: "text", label: "Email", name: "email" },
-  { type: "password", label: "Password", name: "password" },
+  { inputType: "input", type: "text", label: "Username", name: "username" },
+  { inputType: "input", type: "text", label: "Email", name: "email" },
+  { inputType: "input", type: "password", label: "Password", name: "password" },
 ];
 
 const initialState = {
@@ -24,8 +24,8 @@ function RegisterForm({}: Props) {
   console.log(state);
   return (
     <form action={formAction} className={styles.wrapper}>
-      {inputFields.map(({ type, label, name }) => (
-        <Input key={name} type={type} label={label} name={name} />
+      {inputFields.map(({ type, label, name, inputType }) => (
+        <Input key={name} inputType={inputType} type={type} label={label} name={name} />
       ))}
       <Button
         label={pending ? "Loading..." : "Register"}
@@ -35,8 +35,8 @@ function RegisterForm({}: Props) {
         iconPosition="right"
         disabled={pending}
       ></Button>
-      <Link href="/auth/register">
-        <p>je n&apos;ai pas de compte</p>
+      <Link href="/auth/login">
+        <p>j&apos;ai deja un compte</p>
       </Link>
     </form>
   );
